@@ -1,0 +1,29 @@
+<div class="container" style="margin-top:20px;">
+  <div class="row">
+    <div class="col-12">
+      <h2>Wszystkie opinie:</h2>
+      <div class="row">
+        <div *ngFor="let opinio of opinion" class="col-12 col-md-6" style="margin-top:30px;background-color:#ededed;padding: 20px;">
+          <div class="row">
+            <div class="col-12">
+              <h3>{{ opinio?.name }}</h3>
+            </div>
+            <div class="col-12" style="padding: 15px;">
+              {{ opinio?.content }}
+            </div>
+            <div class="col-12">
+              <a href="{{ opinio?.link }}" target="_blank">{{ opinio?.link }}</a>
+            </div>
+            <div class="col-6">
+              Cena: {{ opinio?.price }} PLN
+            </div>
+            <div class="col-6">
+              Dodał: {{ opinio?.username }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <p><a [routerLink]="['/login']">Logout</a></p> -->
+    </div>
+  </div>
+</div>
